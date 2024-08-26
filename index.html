@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enciptador de texto</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <header class="header">
+        <img src="./assets/logo.png" alt="logo" class="logo">
+        <h1 class="titulo">Encriptador de texto</h1>
+    </header>
+    <main class="contenido">
+        <section class="contenido__izquierdo">
+            <textarea class="texto__usuario" id="texto__usuario" type="text" placeholder="Ingrese el texto aquí" rows="8" oninput="validarFormato()"></textarea>
+            <div class="menu__validacion">
+                <img src="./assets/exclamacion.png" alt="Signo de exclamación" class="imagen__validacion">
+                <p class="mensaje__validacion">Solo letras minúsculas y sin acentos</p>
+            </div>
+            <div class="contenido__botones">
+                <button class="boton__encriptar" onclick="encriptarTexto()">Encriptar</button>
+                <button class="boton__desencriptar" onclick="desencriptarTexto()">Desencriptar</button>
+            </div>
+        </section>
+        <section class="contenido__derecho">
+            <img src="./assets/busqueda.png" class="imagen__busqueda" alt="busqueda" id="imagen__busqueda">
+            <p class="mensaje__1" id="mensaje__1">Ningún mensaje fue encontrado</p>
+            <p class="mensaje__2" id="mensaje__2">Ingresa el texto que desees encriptar o desencriptar.</p>
+            <textarea class="texto__resultado" id="texto__resultado" type="text" disabled></textarea>
+            <button class="boton__copiar" id="boton__copiar" onclick="copiarTexto()">Copiar</button>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>Desarrollado por: Cristian Piamonte</p>
+        <p>Año: 2024</p>
+    </footer>
+
+    <script src="./scripts/app.js"></script>
+</body>
+</html>
